@@ -8,6 +8,10 @@ const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
 app.use(cors());
+app.get('/', (req, res) => {
+    res.send('Welcome to Book API! Use /api/v1/books to access the book endpoints.');
+});
+
 
 
 app.use('/api/v1/books', booksRoutes);
