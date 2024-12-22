@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     try {
         
-        const response = await fetch('http://localhost:8080/api/v1/books'); 
+        const response = await fetch('https://bookpedia-8wqd.onrender.com/api/v1/books'); 
         if (!response.ok) throw new Error(`Error: ${response.status}`);
 
         const data = await response.json(); 
